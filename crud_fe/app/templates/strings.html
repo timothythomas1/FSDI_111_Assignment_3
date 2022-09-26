@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+
+
+{% block title %}
+Strings
+{% endblock title %}
+
+
+
+{% block content %}
+    <h1>{{ data_type["name"] }}</h1>
+    <p>{{ data_type["summary"] }}</p>
+
+    <p>Python does not have a character data type, a single character is simply a string with a length of 1. Square brackets can be used to access elements of the string.</p>
+    <h4>Creating Strings in Python</h4>
+    <p>Strings in Python can be created using single quotes or double quotes or even triple quotes. </p>
+    <pre class="line-numbers">
+        <code class="language-python">
+            # Python Program for
+            # Creation of String
+             
+            INPUT:
+            # Creating a String
+            # with single Quotes
+            String1 = 'Welcome to the my world'
+            print("String with the use of Single Quotes: ")
+            print(String1)
+             
+            # Creating a String
+            # with double Quotes
+            String1 = "I'm a programmer"
+            print("\nString with the use of Double Quotes: ")
+            print(String1)
+             
+            # Creating a String
+            # with triple Quotes
+            String1 = '''I'm a programmer and I live in a world of "programmers"'''
+            print("\nString with the use of Triple Quotes: ")
+            print(String1)
+             
+            # Creating String with triple
+            # Quotes allows multiple lines
+            String1 = '''programmers
+                        For
+                        Life'''
+            print("\nCreating a multiline String: ")
+            print(String1)
+
+            OUTPUT:
+            String with the use of Single Quotes: 
+            Welcome to the my world
+
+            String with the use of Double Quotes: 
+            I'm a programmer
+
+            String with the use of Triple Quotes: 
+            I'm a programmer and I live in a world of "programmers"
+
+            Creating a multiline String: 
+            programmers
+                        For
+                        Life
+        </code>
+     </pre>
+{% endblock content %}

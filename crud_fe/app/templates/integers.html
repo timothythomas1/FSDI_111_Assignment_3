@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+
+
+{% block title %}
+Integers
+{% endblock title %}
+
+{% block content %}
+    <h1>{{ data_type["name"] }}</h1>
+    <p>{{ data_type["summary"] }}</p>
+    <h4>Creating Integers in Python</h4>
+    <pre class="line-numbers">
+        <code class="language-python">
+            # Python program to 
+            # demonstrate numeric value
+  
+            INPUT:
+            a = 5
+            print("Type of a: ", type(a))
+  
+            b = 5.0
+            print("\nType of b: ", type(b))
+  
+            c = 2 + 4j
+            print("\nType of c: ", type(c))
+
+            OUTPUT:
+            Type of a:  class 'int'
+
+            Type of b:  class 'float'
+                
+            Type of c:  class 'complex'
+        </code>
+     </pre>
+    {% endblock content %}

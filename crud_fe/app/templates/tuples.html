@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+
+
+{% block title %}
+Tuples
+{% endblock title %}
+
+
+
+{% block content %}
+    <h1>{{ data_type["name"] }}</h1>
+    <p>{{ data_type["summary"] }}</p>
+
+    <h4>Creating Tuples in Python</h4>
+    <p>In Python, tuples are created by placing a sequence of values separated by ‘comma’ with or without the use of parentheses for grouping the data sequence.</p>
+    <p>Note- Creation of Python tuple without the use of parentheses is known as Tuple Packing.</p>
+    
+    <pre class="line-numbers">
+        <code class="language-python">
+            # Creating an empty Tuple
+
+            INPUT:
+            Tuple1 = ()
+            print("Initial empty Tuple: ")
+            print(Tuple1)
+            
+            # Creating a Tuple
+            # with the use of string
+            Tuple1 = ('Programmer', 'For')
+            print("\nTuple with the use of String: ")
+            print(Tuple1)
+            
+            # Creating a Tuple with
+            # the use of list
+            list1 = [1, 2, 4, 5, 6]
+            print("\nTuple using List: ")
+            print(tuple(list1))
+            
+            # Creating a Tuple
+            # with the use of built-in function
+            Tuple1 = tuple('Programmer')
+            print("\nTuple with the use of function: ")
+            print(Tuple1)
+            
+            OUTPUT:
+            Initial empty Tuple: 
+            ()
+
+            Tuple with the use of String: 
+            ('Programmer', 'For')
+
+            Tuple using List: 
+            (1, 2, 4, 5, 6)
+
+            Tuple with the use of function: 
+            ('P', 'r', 'o', 'g', 'r', 'a', 'm', 'm', 'e', 'r') 
+        </code>
+     </pre>
+
+    {% endblock content %}

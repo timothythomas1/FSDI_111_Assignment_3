@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Home
+{% endblock title %}
+
+{% block content %}
+    <div class="top-banner">
+        <h1>Comparing Python Data Types</h1>
+    </div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<table>
+  <tr>
+    <th style="width:50%">Data Type</th>
+    <th>Pass By:</th>
+  </tr>
+
+  {% for dt in data_types %}
+  <tr>
+    <td>{{ dt["name"] }}</td>
+    <td>{{ dt["description"] }}</td>
+  </tr>
+  {% endfor %}
+
+</table>
+{% endblock content %}

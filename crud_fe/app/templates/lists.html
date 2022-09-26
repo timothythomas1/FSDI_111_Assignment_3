@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+
+
+{% block title %}
+Lists
+{% endblock title %}
+
+{% block content %}
+    <h1>{{ data_type["name"] }}</h1>
+    <p>{{ data_type["summary"] }}</p>
+
+    <p>The list is a sequence data type which is used to store the collection of data. Tuples and Strings are other types of sequence data types.</p>
+    <h4>Creating Lists in Python</h4>
+    <p>Here we are creating Python List using [].</p>
+    <pre class="line-numbers">
+        <code class="language-python">
+            # Python program to 
+            # demonstrate lists
+  
+            INPUT:
+            Var = ["Programmer", "for", "Programmer"]
+            print(Var)
+
+            OUTPUT:
+            ["Programmer", "for", "Programmer"]
+        </code>
+     </pre>
+
+    {% endblock content %}

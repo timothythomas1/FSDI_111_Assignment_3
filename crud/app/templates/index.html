@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Home
+{% endblock title %}
+
+{% block content %}
+    <div class="top-banner">
+        <h1>Relational & Non-Relational Databases</h1>
+        <p>Structured Query Language or SQL is a standard Database language which is used to create, maintain and retrieve the data from relational databases like MySQL, Oracle, SQL Server, PostGre, etc. The recent ISO standard version of SQL is SQL:2019.
+
+    </div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<table>
+  <tr>
+    <th style="width:50%">Relational Databases (SQL)</th>
+    <th>Non-Relational Databases (NoSQL)</th>
+  </tr>
+  <tr>
+    <td>These databases have fixed or static or predefined schema</td>
+    <td>Non-relational or distributed database system</td>
+  </tr>
+  <tr>
+    <td>These databases are not suited for hierarchical data storage.</td>
+    <td>These databases are best suited for hierarchical data storage</td>
+  </tr>
+  <tr>
+    <td>These databases are best suited for complex queries</td>
+    <td>These databases are NOT so good for complex queries</td>
+  </tr>
+  <tr>
+    <td>Vertically Scalable</td>
+    <td>Horizontally scalable</td>
+  </tr>
+  <tr>
+    <td>Follows ACID property</td>
+    <td>Follows CAP(consistency, availability, partition tolerance)</td>
+  </tr>
+  <tr>
+    <td>Examples: MySQL, PostgreSQL, Oracle, MS-SQL Server, Sqlite etc</td>
+    <td>Examples: MongoDB, GraphQL, HBase, Neo4j, Cassandra etc</td>
+  </tr>
+</table>
+{% endblock content %}

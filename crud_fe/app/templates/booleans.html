@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+
+
+{% block title %}
+Booleans
+{% endblock title %}
+
+
+
+{% block content %}
+    <h1>{{ data_type["name"] }}</h1>
+    <p>{{ data_type["summary"] }}</p>
+
+    <p>The table below is of Boolean comparison operators.</p>
+    <table>
+        <tr>
+            <th style="width:50%">Operator</th>
+            <th>Definition</th>
+        </tr>
+        <tr>
+            <th>==</th>
+            <th>Equal to</th>
+        </tr>
+        <tr>
+            <th>!=</th>
+            <th>Not equal to</th>
+        </tr>
+        <tr>
+            <th><</th>
+            <th>Less than</th>
+        </tr>
+        <tr>
+            <th>></th>
+            <th>Greater than</th>
+        </tr>
+        <tr>
+            <th><=</th>
+            <th>Less than or eqaul to</th>
+        </tr>
+        <tr>
+            <th>>=</th>
+            <th>Greater than or eqaul to</th>
+        </tr>
+    </table>
+<p> </p>
+    <h4>Working with Booleans in Python</h4>
+    <pre class="line-numbers">
+        <code class="language-python">
+            INPUT:
+            x = 5
+            y = 8
+            
+            print("x == y:", x == y)
+            print("x != y:", x != y)
+            print("x < y:", x < y)
+            print("x > y:", x > y)
+            print("x <= y:", x <= y)
+            print("x >= y:", x >= y)
+
+            Output:
+            x == y: False
+            x != y: True
+            x < y: True
+            x > y: False
+            x <= y: True
+            x >= y: False
+        </code>
+     </pre>
+
+{% endblock content %}

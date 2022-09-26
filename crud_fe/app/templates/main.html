@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Home
+{% endblock title %}
+
+{% block content %}
+<div class="top-banner">
+    <h1>Passing by Value vs. by Reference in Python3</h1>
+    <p>This website describes and compares the different data types and passing by Value vs. by Reference.</p>
+    <p>Users can also add their own data types in the 'New' tab above.</p>
+</div>
+<p><strong>Pass by value</strong> means that a copy of the actual parameter’s value is made in memory, i.e. the caller and callee have two independent variables with the same value. If the callee modifies the parameter value, the effect is not visible to the caller.</p>
+<p>Passing by value means that the value of the function parameter is copied into another location of your memory, and when accessing or modifying the variable within your function, only the copy is accessed/modified and the original value is left untouched. Passing by value is how your values are passed on most of the time.</p>
+<p><strong>Pass by reference</strong> (also called pass by address) means to pass the reference of an argument in the calling function to the corresponding formal parameter of the called function so that a copy of the address of the actual parameter is made in memory, i.e. the caller and the callee use the same variable for the parameter. If the callee modifies the parameter variable, the effect is visible to the caller’s variable.</p>
+<p>In short, pass by value means the actual value is passed on. Pass by reference means a number (called an address) is passed on which defines where the value is stored.</p>
+<p>Python utilizes a system, which is known as “Call by Object Reference” or “Call by assignment”. In the event that you pass arguments like whole numbers, strings or tuples to a function, the passing is like call-by-value because you can not change the value of the immutable objects being passed to the function. Whereas passing mutable objects can be considered as call by reference because when their values are changed inside the function, then it will also be reflected outside the function.</p>
+<p>Every variable in python holds an instance of an object. There are two types of objects in python i.e. Mutable and Immutable objects. Whenever an object is instantiated, it is assigned a unique object id. The type of the object is defined at the runtime and it can’t be changed afterwards. However, it’s state can be changed if it is a mutable object.</p>
+<p>Immutable Objects : These are of in-built types like int, float, bool, string, unicode, tuple. In simple words, an immutable object can’t be changed after it is created. Therfore, these data types are passed by value because they need to be copied to a new place in memory due to immutability of the original data. This then means that mutable data types are pass by reference.</p>
+<p>To make a decision whether to use pass by reference or pass by value, there are two simple general rules:</p>
+<ul>
+    <li>If a function should return a single value: <strong>use pass by value</strong></li>
+    <li>If a function should return two or more distinct values:<strong> use pass by reference</strong></li>
+  </ul> 
+
+<h1>Data Types in Python3</h1>
+<ol>
+    {% for dt in data_types %}
+    <li>{{dt["name"] }} - {{ dt["description"] }}</li>
+    {% endfor %}
+</ol>
+{% endblock content %}
